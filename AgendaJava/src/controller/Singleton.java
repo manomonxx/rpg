@@ -13,5 +13,9 @@ public class Singleton {
 		
 		return instance;
 	}
+	
+	public static String Teste(){
+		return "Deu certo!";
+	}
 
 }
