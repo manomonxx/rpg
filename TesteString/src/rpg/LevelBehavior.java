@@ -13,5 +13,7 @@ public interface LevelBehavior {
 	Boolean setAgi_(Integer agi_);
 	Boolean setInt_(Integer int_);
 	Boolean setDex_(Integer dex_);
+	Boolean setVit_(Integer vit_);
+	
 	void setExperience(long exp);
 }
