@@ -28,8 +28,8 @@ public class LevelMago implements LevelBehavior {
 		int_ += 5;
 		dex_ += 2;
 		
-		status();
-		printStatus();
+		status(); //att a hash de status
+		printStatus(); //imprime o status
 		
 	}//aumenta os atributos quando o personagem aumenta de nível	
 	
@@ -163,7 +163,7 @@ public class LevelMago implements LevelBehavior {
 		System.out.println("dex: "+status.get("dex"));
 		System.out.println("bonus: "+status.get("bonus"));
 		System.out.println("exp: "+status.get("exp"));
-		System.out.println("maxExp: "+status.get("maxExp"));
+		System.out.println("next level: "+status.get("maxExp"));
 		
 		System.out.println("-------------------------");
 		System.out.println();

@@ -1,5 +1,7 @@
 package rpg;
 
+import rpg.weapons.Bow;
+
 
 public class dungeonsAndGambiarras {
 
@@ -23,6 +25,9 @@ public class dungeonsAndGambiarras {
 		
 		System.out.println(personagem.getName());
 		System.out.println(personagem.performStatus().get("int"));
+		
+		personagem.setWeapon(new Bow());
+		personagem.performWeapon();
 	}
 
 }
