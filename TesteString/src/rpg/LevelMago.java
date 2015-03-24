@@ -29,6 +29,7 @@ public class LevelMago implements LevelBehavior {
 		dex_ += 2;
 		
 		status();
+		printStatus();
 		
 	}//aumenta os atributos quando o personagem aumenta de nível	
 	
@@ -47,8 +48,6 @@ public class LevelMago implements LevelBehavior {
 	}
 	
 	public void checkLevel(){
-		System.out.println(this.experience);
-		System.out.println(attFormula());
 		if(this.experience >= attFormula()){
 			levelUp();
 			checkLevel(); //recursivo para permitir o aumento de mais de 1 level de uma vez
@@ -146,7 +145,7 @@ public class LevelMago implements LevelBehavior {
 		status.put("exp", this.experience.toString());
 		status.put("maxExp", expMax.toString());
 		
-		printStatus();
+		//printStatus();
 		
 		return status;
 	}
@@ -163,8 +162,8 @@ public class LevelMago implements LevelBehavior {
 		System.out.println("int: "+status.get("int"));
 		System.out.println("dex: "+status.get("dex"));
 		System.out.println("bonus: "+status.get("bonus"));
-		System.out.println("bonus: "+status.get("exp"));
-		System.out.println("bonus: "+status.get("maxExp"));
+		System.out.println("exp: "+status.get("exp"));
+		System.out.println("maxExp: "+status.get("maxExp"));
 		
 		System.out.println("-------------------------");
 		System.out.println();

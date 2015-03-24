@@ -15,7 +15,6 @@ public class dungeonsAndGambiarras {
 		
 		
 		personagem.performExpUp(2000); //2000 de exp
-		System.out.println(personagem.performStatus().get("int"));
 		
 		//personagem.performLevel();
 		//personagem.performLevel();
@@ -23,6 +22,7 @@ public class dungeonsAndGambiarras {
 		//personagem.performStatus();
 		
 		System.out.println(personagem.getName());
+		System.out.println(personagem.performStatus().get("int"));
 	}
 
 }
