@@ -4,7 +4,6 @@ package rpg;
 public class dungeonsAndGambiarras {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("----------------------------------");
 		System.out.println("Mago:");
 		System.out.println("----------------------------------");
@@ -14,11 +13,16 @@ public class dungeonsAndGambiarras {
 		personagem.performWeapon();
 		System.out.println("----------------------------------");
 		
-		personagem.performLevel();
-		personagem.performLevel();
-		personagem.performUpInt(2);
-		personagem.performStatus();
 		
+		personagem.performExpUp(2000); //2000 de exp
+		System.out.println(personagem.performStatus().get("int"));
+		
+		//personagem.performLevel();
+		//personagem.performLevel();
+		//personagem.performUpInt(2);
+		//personagem.performStatus();
+		
+		System.out.println(personagem.getName());
 	}
 
 }

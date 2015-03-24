@@ -1,5 +1,7 @@
 package rpg;
 
+import java.util.Map;
+
 public abstract class Personagem {
 
 	public String name; // nome do personagem
@@ -29,9 +31,9 @@ public abstract class Personagem {
 	public void performWeapon() {
 		weaponBehavior.useWeapon();
 	}
-
-	public void performLevel(){
-		levelBehavior.levelUp();
+	
+	public void performExpUp(long exp){
+		levelBehavior.setExperience(exp);
 	}
 	
 	public void performUpStr(Integer str_){
@@ -50,8 +52,8 @@ public abstract class Personagem {
 		levelBehavior.setDex_(dex_);
 	}
 	
-	public void performStatus(){
-		levelBehavior.status();
+	public Map<String, String> performStatus(){
+		return levelBehavior.status();
 	}
 	
 	public void setClasse(ClassBehavior cb) {

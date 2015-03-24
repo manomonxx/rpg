@@ -1,44 +1,60 @@
 package rpg;
 
+import java.util.HashMap;
+import java.util.Map;
+
+
 public class LevelMago implements LevelBehavior {
 
 	private final Integer param_bonus = 1; //pontuação bonus ganha a cada nível
 	
 	public Integer level = 1; // nível do personagem
-	public long experience = 0; // experiencia do personagem
+	public Long experience = (long) 0; // experiencia do personagem
 
 	private Integer str_ = 1; // força
 	private Integer agi_ = 1; // agilidade
-
 	private Integer int_ = 1; // inteligencia
 	private Integer dex_ = 1; // destreza
 	
 	public Integer bonus = 0; //número total de pontos bonus disponiveis
 	
+	Map<String, String> status = new HashMap<String, String>();
+	
 	//crescimento str/agi/int/dex = 1/1/5/2 + bonus = 1 ponto/lvl
-	@Override
-	public void levelUp() {
+	private void levelUp() {
 		setLevel();
 		str_ += 1;
 		agi_ += 1;
 		int_ += 5;
 		dex_ += 2;
 		
-		System.out.println();
-		System.out.println("------------------------");
-		System.out.println("Seu mago aumentou para o nível "+level);
-		System.out.println("Seus novos status são:");
-		System.out.println("------------------------");
-		System.out.println("str: "+str_);
-		System.out.println("agi: "+agi_);
-		System.out.println("int: "+int_);
-		System.out.println("dex: "+dex_);
-		System.out.println("bonus: "+getBonus());
-		System.out.println("------------------------");
-		System.out.println();
+		status();
 		
-	}//aumenta os atributos quando o personagem aumenta de nível
+	}//aumenta os atributos quando o personagem aumenta de nível	
+	
+	private long attFormula(){
+		return (long) Math.pow(2, this.level); //total de exp para aumentar de level
+	}
+	
+	public long getExperience() { //exp atual 
+		return experience;
+	}
 
+	public void setExperience(long experience) {
+		this.experience += experience;
+		
+		checkLevel();
+	}
+	
+	public void checkLevel(){
+		System.out.println(this.experience);
+		System.out.println(attFormula());
+		if(this.experience >= attFormula()){
+			levelUp();
+			checkLevel(); //recursivo para permitir o aumento de mais de 1 level de uma vez
+		}
+	}
+	
 	protected Integer getLevel(){
 		return this.level;
 	}
@@ -117,20 +133,40 @@ public class LevelMago implements LevelBehavior {
 	}
 
 	@Override
-	public void status() {
+	public Map<String, String> status() {
+		
+		Long expMax = (Long) attFormula();
+		
+		status.put("level",this.level.toString());
+		status.put("str",this.str_.toString());
+		status.put("agi",this.agi_.toString());
+		status.put("int",this.int_.toString());
+		status.put("dex",this.dex_.toString());
+		status.put("bonus",getBonus().toString());
+		status.put("exp", this.experience.toString());
+		status.put("maxExp", expMax.toString());
+		
+		printStatus();
+		
+		return status;
+	}
+	
+	private void printStatus(){
 		System.out.println();
 		System.out.println("-------------------------");
 		System.out.println("Status: ");
 		System.out.println("-------------------------");
 		
-		System.out.println("Level:"+ getLevel());
-		System.out.println("str: "+str_);
-		System.out.println("agi: "+agi_);
-		System.out.println("int: "+int_);
-		System.out.println("dex: "+dex_);
-		System.out.println("bonus: "+getBonus());
+		System.out.println("Level:"+ status.get("level"));
+		System.out.println("str: "+status.get("str"));
+		System.out.println("agi: "+status.get("agi"));
+		System.out.println("int: "+status.get("int"));
+		System.out.println("dex: "+status.get("dex"));
+		System.out.println("bonus: "+status.get("bonus"));
+		System.out.println("bonus: "+status.get("exp"));
+		System.out.println("bonus: "+status.get("maxExp"));
 		
 		System.out.println("-------------------------");
 		System.out.println();
-	}	
+	}
 }
