@@ -5,15 +5,16 @@ import rpg.Atributos;
 public class Inteligencia implements Atributos<Object> {
 
 	private Object inteligencia;
-	
+
 	@Override
-	public Object getInteligencia() {
+	public Object getAttr() {
+		// TODO Auto-generated method stub
 		return inteligencia;
 	}
 
 	@Override
-	public void setInteligencia(Object inteligencia) {
-		this.inteligencia = inteligencia;
+	public void setAttr(Object value) {
+		this.inteligencia = value;
 	}
 
 }

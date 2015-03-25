@@ -1,6 +1,6 @@
 package rpg;
 
 public interface Atributos<E> {
-	Object getInteligencia();
-	void setInteligencia(E value);
+	Object getAttr();
+	void setAttr(E value);
 }
