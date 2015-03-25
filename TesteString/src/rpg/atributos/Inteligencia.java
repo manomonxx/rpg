@@ -2,17 +2,17 @@ package rpg.atributos;
 
 import rpg.Atributos;
 
-public class Inteligencia implements Atributos<Object> {
+public class Inteligencia<E> implements Atributos<E>{
 
-	private Object inteligencia;
+	private E inteligencia;
 
 	@Override
-	public Object getAttr() {
+	public E getAttr() {
 		return inteligencia;
 	}
 
 	@Override
-	public void setAttr(Object value) {
+	public void setAttr(E value) {
 		this.inteligencia = value;
 	}
 

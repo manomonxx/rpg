@@ -30,6 +30,10 @@ public class dungeonsAndGambiarras {
 		
 		personagem.setWeapon(new Bow());
 		personagem.performWeapon();
+		
+		Status<Integer> smago = new AttrMago<Integer>();
+		smago.performSetStatus(1);
+		System.out.println(smago.performGetStatus());
 	}
 
 }
