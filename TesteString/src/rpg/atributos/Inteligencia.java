@@ -8,7 +8,6 @@ public class Inteligencia implements Atributos<Object> {
 
 	@Override
 	public Object getAttr() {
-		// TODO Auto-generated method stub
 		return inteligencia;
 	}
 
