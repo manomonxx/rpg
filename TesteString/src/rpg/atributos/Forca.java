@@ -2,18 +2,18 @@ package rpg.atributos;
 
 import rpg.AtributosBehavior;
 
-public class Inteligencia<E> implements AtributosBehavior<E>{
+public class Forca<E> implements AtributosBehavior<E> {
 
-	private E inteligencia;
-
+	private E forca; //atributo força.
+	
 	@Override
 	public E getAttr() {
-		return inteligencia;
+		return this.forca;
 	}
 
 	@Override
 	public void setAttr(E value) {
-		this.inteligencia = value;
+		this.forca = value;
 	}
 
 }

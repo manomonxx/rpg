@@ -3,7 +3,7 @@ package rpg;
 import rpg.classes.Hunter;
 import rpg.weapons.Bow;
 
-public class Arqueiro extends Personagem{
+public class Arqueiro<E> extends Personagem<E>{
 
 	public Arqueiro() {
 		classBehavior = new Hunter();

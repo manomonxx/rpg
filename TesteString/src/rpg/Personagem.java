@@ -2,13 +2,14 @@ package rpg;
 
 import java.util.Map;
 
-public abstract class Personagem {
+public abstract class Personagem<E> {
 
 	public String name; // nome do personagem
 	
 	ClassBehavior classBehavior; // classe do personagem
 	WeaponBehavior weaponBehavior; // arma utilizada pelo personagem
 	LevelBehavior levelBehavior; //controla o nível e os atributos do personagem
+	Map<String, AtributosBehavior<E>> attrBehavior; //controla o nível e os atributos do personagem
 	
 	public Personagem() {
 		
@@ -23,7 +24,16 @@ public abstract class Personagem {
 	}
 
 	public abstract void display(); // renderiza personagem
-
+	
+	public void performSetAttr(String name, E value) {
+		AtributosBehavior<E> aux =  attrBehavior.get(name);
+		aux.setAttr(value);
+	}
+	
+	public E performGetAttr(String name) {
+		return attrBehavior.get(name).getAttr();
+	}
+	
 	public void performClass() {
 		classBehavior.changeClass();
 	}

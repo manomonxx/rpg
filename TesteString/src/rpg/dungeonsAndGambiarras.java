@@ -9,7 +9,7 @@ public class dungeonsAndGambiarras {
 		System.out.println("----------------------------------");
 		System.out.println("Mago:");
 		System.out.println("----------------------------------");
-		Personagem personagem = new Mago();
+		Personagem<Integer> personagem = new Mago<Integer>();
 		personagem.setName("Fernando");
 		personagem.performClass();
 		personagem.performWeapon();
@@ -31,9 +31,24 @@ public class dungeonsAndGambiarras {
 		personagem.setWeapon(new Bow());
 		personagem.performWeapon();
 		
-		Status<Integer> smago = new AttrMago<Integer>();
-		smago.performSetStatus(1);
-		System.out.println(smago.performGetStatus());
+		
+		System.out.println("----------------------------------");
+		System.out.println("Guerreiro:");
+		System.out.println("----------------------------------");
+		Personagem<Integer> personagem2 = new Guerreiro<Integer>();
+		personagem2.setName("Fernando");
+		personagem2.performClass();
+		personagem2.performWeapon();
+		System.out.println("----------------------------------");
+		
+		personagem2.performSetAttr("forca",1);
+		System.out.println("Força: "+personagem2.performGetAttr("forca"));
+		
+		personagem2.performSetAttr("destreza",3);
+		System.out.println("Destreza: "+personagem2.performGetAttr("destreza"));
+		
+		personagem2.performSetAttr("inteligencia",6);
+		System.out.println("Inteligência: "+personagem2.performGetAttr("inteligencia"));
 	}
 
 }

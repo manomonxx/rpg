@@ -3,7 +3,7 @@ package rpg;
 import rpg.classes.Magician;
 import rpg.weapons.Rod;
 
-public class Mago extends Personagem{
+public class Mago<E> extends Personagem<E>{
 
 	public Mago() {
 		classBehavior = new Magician();
