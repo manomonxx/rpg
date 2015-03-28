@@ -2,23 +2,24 @@ package rpg;
 
 import java.util.HashMap;
 
-import rpg.atributos.Destreza;
+import rpg.atributos.CriticalChance;
 import rpg.atributos.Forca;
-import rpg.atributos.Inteligencia;
 import rpg.classes.Warrior;
 import rpg.weapons.Sword;
 
-public class Guerreiro<E> extends Personagem<E>{
+public class Guerreiro extends Personagem{
 	
 	public Guerreiro() {
-		classBehavior = new Warrior();
-		weaponBehavior = new Sword();
-		attrBehavior = new HashMap<String, AtributosBehavior<E>>();
+		classBehavior = new Warrior(); //TODO depois extender exemplo com mais classes - skyrim =[
+		weaponBehavior = new Sword(); //TODO depois extender exemplo com mais armas - Bárbaro com 2 machados
+		attrBehavior = new HashMap<String, AtributosBehavior<Object>>();
+		
 		
 		//agregando os atributos ao personagem
-		attrBehavior.put("forca", new Forca<E>());
-		attrBehavior.put("destreza", new Destreza<E>());
-		attrBehavior.put("inteligencia", new Inteligencia<E>());
+		attrBehavior.put("forca", new Forca(1));
+		//attrBehavior.put("destreza", new Destreza<E>());
+		//attrBehavior.put("inteligencia", new Inteligencia<E>());
+		attrBehavior.put("critical", new CriticalChance(.1));
 	}
 	
 	@Override

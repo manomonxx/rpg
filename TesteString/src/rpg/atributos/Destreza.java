@@ -2,18 +2,18 @@ package rpg.atributos;
 
 import rpg.AtributosBehavior;
 
-public class Destreza<E> implements AtributosBehavior<E> {
+public class Destreza implements AtributosBehavior<Object> {
 
-	private E destreza; //atributo destreza.
+	private Integer destreza; //atributo destreza.
 	
 	@Override
-	public E getAttr() {
+	public Integer getAttr() {
 		return this.destreza;
 	}
 
 	@Override
-	public void setAttr(E value) {
-		this.destreza = value;
+	public void setAttr(Object value) {
+		this.destreza = (Integer)value;
 	}
 
 }

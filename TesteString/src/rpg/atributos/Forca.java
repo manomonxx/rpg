@@ -2,18 +2,22 @@ package rpg.atributos;
 
 import rpg.AtributosBehavior;
 
-public class Forca<E> implements AtributosBehavior<E> {
+public class Forca implements AtributosBehavior<Object> {
 
-	private E forca; //atributo força.
+	private Integer forca; //atributo força.
+
+	public Forca(Object forca) {
+		this.forca = (Integer)forca;
+	}
 	
 	@Override
-	public E getAttr() {
+	public Integer getAttr() {
 		return this.forca;
 	}
 
 	@Override
-	public void setAttr(E value) {
-		this.forca = value;
+	public void setAttr(Object value) {
+		this.forca = (Integer)value;
 	}
 
 }

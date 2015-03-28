@@ -2,14 +2,14 @@ package rpg;
 
 import java.util.Map;
 
-public abstract class Personagem<E> {
+public abstract class Personagem {
 
-	public String name; // nome do personagem
+	private String name; // nome do personagem
 	
 	ClassBehavior classBehavior; // classe do personagem
 	WeaponBehavior weaponBehavior; // arma utilizada pelo personagem
 	LevelBehavior levelBehavior; //controla o nível e os atributos do personagem
-	Map<String, AtributosBehavior<E>> attrBehavior; //controla o nível e os atributos do personagem
+	Map<String, AtributosBehavior<Object>> attrBehavior; //controla o nível e os atributos do personagem
 	
 	public Personagem() {
 		
@@ -25,12 +25,12 @@ public abstract class Personagem<E> {
 
 	public abstract void display(); // renderiza personagem
 	
-	public void performSetAttr(String name, E value) {
-		AtributosBehavior<E> aux =  attrBehavior.get(name);
+	public void performSetAttr(String name, Object value) {
+		AtributosBehavior<Object> aux =  attrBehavior.get(name);
 		aux.setAttr(value);
 	}
 	
-	public E performGetAttr(String name) {
+	public Object performGetAttr(String name) {
 		return attrBehavior.get(name).getAttr();
 	}
 	
@@ -40,30 +40,6 @@ public abstract class Personagem<E> {
 
 	public void performWeapon() {
 		weaponBehavior.useWeapon();
-	}
-	
-	public void performExpUp(long exp){
-		levelBehavior.setExperience(exp);
-	}
-	
-	public void performUpStr(Integer str_){
-		levelBehavior.setStr_(str_);
-	}
-	
-	public void performUpAgi(Integer agi_){
-		levelBehavior.setAgi_(agi_);
-	}
-	
-	public void performUpInt(Integer int_){
-		levelBehavior.setInt_(int_);
-	}
-	
-	public void performUpDex(Integer dex_){
-		levelBehavior.setDex_(dex_);
-	}
-	
-	public Map<String, String> performStatus(){
-		return levelBehavior.status();
 	}
 	
 	public void setClasse(ClassBehavior cb) {
