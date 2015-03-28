@@ -3,7 +3,9 @@ package rpg;
 import java.util.HashMap;
 
 import rpg.atributos.CriticalChance;
+import rpg.atributos.Destreza;
 import rpg.atributos.Forca;
+import rpg.atributos.Inteligencia;
 import rpg.classes.Warrior;
 import rpg.weapons.Sword;
 
@@ -17,8 +19,8 @@ public class Guerreiro extends Personagem{
 		
 		//agregando os atributos ao personagem
 		attrBehavior.put("forca", new Forca(1));
-		//attrBehavior.put("destreza", new Destreza<E>());
-		//attrBehavior.put("inteligencia", new Inteligencia<E>());
+		attrBehavior.put("destreza", new Destreza(2));
+		attrBehavior.put("inteligencia", new Inteligencia(4));
 		attrBehavior.put("critical", new CriticalChance(.1));
 	}
 	

@@ -6,6 +6,10 @@ public class Destreza implements AtributosBehavior<Object> {
 
 	private Integer destreza; //atributo destreza.
 	
+	public Destreza(Integer destreza) {
+		this.destreza = destreza;
+	}
+	
 	@Override
 	public Integer getAttr() {
 		return this.destreza;

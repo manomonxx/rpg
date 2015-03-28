@@ -6,6 +6,10 @@ public class Inteligencia implements AtributosBehavior<Object>{
 
 	private Integer inteligencia;
 
+	public Inteligencia(Integer inteligencia) {
+		this.inteligencia = inteligencia;
+	}
+	
 	@Override
 	public Integer getAttr() {
 		return inteligencia;
