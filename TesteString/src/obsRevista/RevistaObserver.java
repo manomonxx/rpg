@@ -22,5 +22,6 @@ public class RevistaObserver extends Observable {
 		
 		Assinante ass = new Assinante(rev);
 		rev.setEdicao(novaEdicao);
+		ass.notifyAll();//atoa
 	}
 }
