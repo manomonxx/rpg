@@ -61,10 +61,10 @@ public class dungeonsAndGambiarras {
 	
 	public static void printAttr(Personagem per){
 		Iterator<AtributosBehavior<Object>> attrIT =  per.createIterator();
-		printMenu(attrIT);
+		printAttr(attrIT);
 	}
 	
-	private static void printMenu(Iterator<AtributosBehavior<Object>> attrIT) {
+	private static void printAttr(Iterator<AtributosBehavior<Object>> attrIT) {
 		
 		while (attrIT.hasNext()) {
 			AtributosBehavior<Object> atributosBehavior = (AtributosBehavior<Object>) attrIT.next();
