@@ -1,6 +1,11 @@
 package rpg;
 
+import java.util.Iterator;
 import java.util.Map;
+
+import javax.activation.UnsupportedDataTypeException;
+
+import rpg.old.LevelBehavior;
 
 public abstract class Personagem {
 
@@ -22,15 +27,30 @@ public abstract class Personagem {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public abstract Iterator<AtributosBehavior<Object>> createIterator(); // renderiza personagem
 
 	public abstract void display(); // renderiza personagem
 	
-	public void performSetAttr(String name, Object value) {
+	public void performSetAttr(String name, Object value) throws Exception {
 		AtributosBehavior<Object> aux =  attrBehavior.get(name);
-		aux.setAttr(value);
+		
+		if(aux == null){
+			throw new NullPointerException("A classe de nickname \""+name+"\" não foi instânciada!");
+		}
+		
+		if(aux.getAttr().getClass().getName().equals(value.getClass().getName())){
+			aux.setAttr(value);
+		}else{
+			throw new UnsupportedDataTypeException("Tipo "+value.getClass().getSimpleName()+" incompatível com o tipo da classe "+attrBehavior.get(name).getClass().getSimpleName()+"("+aux.getAttr().getClass().getSimpleName()+")");
+		}
 	}
 	
 	public Object performGetAttr(String name) {
+		if(attrBehavior.get(name) == null){
+			throw new NullPointerException("A classe de nickname \""+name+"\" não foi instânciada!");
+		}
+		
 		return attrBehavior.get(name).getAttr();
 	}
 	

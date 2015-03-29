@@ -6,8 +6,8 @@ public class Forca implements AtributosBehavior<Object> {
 
 	private Integer forca; //atributo força.
 
-	public Forca(Object forca) {
-		this.forca = (Integer)forca;
+	public Forca(Integer forca) {
+		this.forca = forca;
 	}
 	
 	@Override

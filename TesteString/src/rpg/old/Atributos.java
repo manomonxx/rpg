@@ -1,4 +1,4 @@
-package rpg;
+package rpg.old;
 
 public interface Atributos<E> {
 	E getAttr();

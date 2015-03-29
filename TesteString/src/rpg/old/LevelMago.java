@@ -1,4 +1,4 @@
-package rpg;
+package rpg.old;
 
 import java.util.HashMap;
 import java.util.Map;
