@@ -6,7 +6,7 @@ import classes.Guerreiro;
 import classes.Mago;
 
 
-public class dungeonsAndGambiarras {
+public class DungeonsAndGambiarras {
 
 	public static void main(String[] args) throws Exception {
 		
