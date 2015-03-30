@@ -3,6 +3,7 @@ package classes;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import src.AbilityComponent;
 import src.AtributosBehavior;
 import src.Personagem;
 import weapons.Rod;
@@ -11,7 +12,7 @@ import atributos.Inteligencia;
 
 //Classe Primária
 public class Mago extends Personagem{
-
+	
 	public Mago() {
 		classBehavior = new Magician();
 		weaponBehavior = new Rod();
@@ -19,6 +20,17 @@ public class Mago extends Personagem{
 		
 		attrBehavior.put("inteligencia", new Inteligencia(4));
 		attrBehavior.put("destreza", new Destreza(3));
+	}
+	
+	public Mago(AbilityComponent abilities) {
+		classBehavior = new Magician();
+		weaponBehavior = new Rod();
+		attrBehavior = new HashMap<String, AtributosBehavior<Object>>();
+		
+		attrBehavior.put("inteligencia", new Inteligencia(4));
+		attrBehavior.put("destreza", new Destreza(3));
+		
+		allAbilities = abilities;
 	}
 	
 	@Override
@@ -32,5 +44,10 @@ public class Mago extends Personagem{
 			throw new NullPointerException("A classe AtributosBehavior não foi instânciada em "+ this.getClass().getSimpleName());
 		
 		return attrBehavior.values().iterator();
+	}
+	
+	@Override
+	public void printSkillTree(){
+		allAbilities.print();
 	}
 }

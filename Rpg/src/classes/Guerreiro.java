@@ -3,6 +3,7 @@ package classes;
 import java.util.HashMap;
 import java.util.Iterator;
 
+import src.AbilityComponent;
 import src.AtributosBehavior;
 import src.Personagem;
 import weapons.Sword;
@@ -25,6 +26,20 @@ public class Guerreiro extends Personagem{
 		attrBehavior.put("critical", new CriticalChance(.1));
 	}
 	
+	public Guerreiro(AbilityComponent abilities) {
+		classBehavior = new Warrior(); //TODO depois extender exemplo com mais classes - skyrim =[
+		weaponBehavior = new Sword(); //TODO depois extender exemplo com mais armas - Bárbaro com 2 machados
+		attrBehavior = new HashMap<String, AtributosBehavior<Object>>();
+		
+		
+		//agregando os atributos ao personagem
+		attrBehavior.put("str", new Forca(4));
+		attrBehavior.put("destreza", new Destreza(2));
+		attrBehavior.put("critical", new CriticalChance(.1));
+		
+		allAbilities = abilities;
+	}
+	
 	@Override
 	public void display() {
 		System.out.println("Eu sou 1 fucking Guerreiro!");
@@ -36,5 +51,10 @@ public class Guerreiro extends Personagem{
 			throw new NullPointerException("A classe AtributosBehavior não foi instânciada em "+ this.getClass().getSimpleName());
 		
 		return attrBehavior.values().iterator();
+	}
+
+	@Override
+	public void printSkillTree() {
+		allAbilities.print();
 	}
 }

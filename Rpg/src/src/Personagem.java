@@ -13,6 +13,8 @@ public abstract class Personagem {
 	protected WeaponBehavior weaponBehavior; // arma utilizada pelo personagem
 	protected Map<String, AtributosBehavior<Object>> attrBehavior; //controla o nível e os atributos do personagem
 	
+	protected AbilityComponent allAbilities;
+	
 	public Personagem() {
 		
 	} // construtor
@@ -28,6 +30,8 @@ public abstract class Personagem {
 	public abstract Iterator<AtributosBehavior<Object>> createIterator(); // renderiza personagem
 
 	public abstract void display(); // renderiza personagem
+
+	public abstract void printSkillTree();
 	
 	public void performSetAttr(String name, Object value) throws Exception {
 		AtributosBehavior<Object> aux =  attrBehavior.get(name);
