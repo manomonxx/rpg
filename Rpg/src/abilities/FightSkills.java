@@ -73,6 +73,9 @@ public class FightSkills extends Ability{
 		System.out.println("Cooldown: "+getCast());
 		System.out.println("Delay: "+getAfterCastDelay());
 		System.out.println("Range: "+getAbilityRange().getRange());
+		System.out.println("Damage: "+getDamage());
+		System.out.println("Tipo: "+getType());
+		System.out.println("Elemento: "+getElement());
 		
 		System.out.println("\nStatus:");
 		
@@ -84,9 +87,6 @@ public class FightSkills extends Ability{
 			System.out.println("Efeito: "+status.getEffect());
 		}
 		
-		System.out.println("Damage: "+getDamage());
-		System.out.println("Tipo: "+getType());
-		System.out.println("Elemento: "+getElement());
 		System.out.println("--------------------------------\n");
 	}
 }

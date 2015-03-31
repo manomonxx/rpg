@@ -8,8 +8,8 @@ import status.Status;
 import status.Stun;
 import utilities.RangeSkills;
 import utilities.TypeRange;
-import abilities.Ability;
 import abilities.FightSkills;
+import abilities.ProfessionSkills;
 import abilities.SkillTree;
 import classes.Mago;
 
@@ -27,7 +27,7 @@ public class MainSkillTeste {
 		allStatus.put("slow", new Slow(1.2, .3)); //tempo e porcentagem de slow
 		
 		skillsMago.addAbility(new FightSkills("RageOfGods", 1, range, 2, 3, "Envolve os inimigos com a irá dos deuses!", allStatus, 100.0, "Ranged", "Fire"));
-		skillsMago.addAbility(new Ability("Craft", 10, range, 4, 3, "Constrói armaduras!"));
+		skillsMago.addAbility(new ProfessionSkills("Craft", 10, range, 4, 3, "Constrói armaduras!"));
 		
 		Personagem personagem = new Mago(skillsMago);
 		
