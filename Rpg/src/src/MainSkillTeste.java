@@ -3,9 +3,13 @@ package src;
 import java.util.HashMap;
 import java.util.Map;
 
+import status.Slow;
 import status.Status;
+import status.Stun;
+import utilities.RangeSkills;
 import utilities.TypeRange;
 import abilities.Ability;
+import abilities.FightSkills;
 import abilities.SkillTree;
 import classes.Mago;
 
@@ -14,29 +18,16 @@ public class MainSkillTeste {
 	public static void main(String[] args) {
 		AbilityComponent skillsMago = new SkillTree("Mago", "Skills do mago!");
 		
-		TypeRange range = new TypeRange() {
-			
-			@Override
-			public Object getRange() {
-				// TODO Auto-generated method stub
-				return (Integer) 10;
-			}
-		};
+		TypeRange<Double> range = new RangeSkills<Double>(10.0);
 		
+		Map<String, Status<?>> allStatus = new HashMap<String, Status<?>>();
 		
-		Map<String, Status> allStatus = new HashMap<String, Status>();
+		//adicionando status à habilidade
+		allStatus.put("Stun", new Stun(1.2, true)); //tempo em segundos e habilita/desabilita ação.
+		allStatus.put("slow", new Slow(1.2, .3)); //tempo e porcentagem de slow
 		
-		Status status = new Status(){
-			@Override
-			public String getStatus() {
-				// TODO Auto-generated method stub
-				return "Stun";
-			}
-		};
-		
-		allStatus.put("Stun", status);
-		
-		skillsMago.addAbility(new Ability("RageOfGods", 1, range, "Envolve os inimigos com a irá dos deuses!", allStatus));
+		skillsMago.addAbility(new FightSkills("RageOfGods", 1, range, 2, 3, "Envolve os inimigos com a irá dos deuses!", allStatus, 100.0, "Ranged", "Fire"));
+		skillsMago.addAbility(new Ability("Craft", 10, range, 4, 3, "Constrói armaduras!"));
 		
 		Personagem personagem = new Mago(skillsMago);
 		

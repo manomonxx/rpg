@@ -27,7 +27,7 @@ public abstract class AbilityComponent {
 		throw new UnsupportedOperationException();
 	}
 	
-	public TypeRange getRange() {
+	public TypeRange<?> getRange() {
 		throw new UnsupportedOperationException();
 	}
 	
@@ -35,7 +35,7 @@ public abstract class AbilityComponent {
 		throw new UnsupportedOperationException();
 	}
 	
-	public Map<String, Status> getStatus() {
+	public Map<String, Status<?>> getStatus() {
 		throw new UnsupportedOperationException();
 	}
 	

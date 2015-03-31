@@ -3,3 +3,8 @@
 1427738141749	Copy compilation unit
 1427748631166	Delete element
 1427748640874	Delete element
+1427792893089	Infer generic type arguments
+1427802483214	Copy compilation unit
+1427802717183	Rename field 'cooldown'
+1427802734411	Rename method 'getCooldown'
+1427802753844	Rename local variable 'cooldown'

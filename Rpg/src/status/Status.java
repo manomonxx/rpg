@@ -1,5 +1,6 @@
 package status;
 
-public interface Status {
-	String getStatus();
+public interface Status<E> {
+	Double getStatusTime();
+	E getEffect();
 }

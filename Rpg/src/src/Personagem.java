@@ -11,9 +11,9 @@ public abstract class Personagem {
 	
 	protected ClassBehavior classBehavior; // classe do personagem
 	protected WeaponBehavior weaponBehavior; // arma utilizada pelo personagem
-	protected Map<String, AtributosBehavior<Object>> attrBehavior; //controla o nível e os atributos do personagem
+	protected Map<String, AtributosBehavior<Object>> attrBehavior; //controla os atributos do personagem
 	
-	protected AbilityComponent allAbilities;
+	protected AbilityComponent allAbilities; //árvore de habilidades do personagem
 	
 	public Personagem() {
 		
@@ -31,7 +31,7 @@ public abstract class Personagem {
 
 	public abstract void display(); // renderiza personagem
 
-	public abstract void printSkillTree();
+	public abstract void printSkillTree(); //imprime a árvore de habilidades
 	
 	public void performSetAttr(String name, Object value) throws Exception {
 		AtributosBehavior<Object> aux =  attrBehavior.get(name);
@@ -40,6 +40,7 @@ public abstract class Personagem {
 			throw new NullPointerException("A classe de nickname \""+name+"\" não foi instânciada!");
 		}
 		
+		//Compara o tipo instânciado(Main) com o tipo da Classe(Atributo)
 		if(aux.getAttr().getClass().getName().equals(value.getClass().getName())){
 			aux.setAttr(value);
 		}else{
