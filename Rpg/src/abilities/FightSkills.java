@@ -14,10 +14,10 @@ public class FightSkills extends Ability{
 	private Map<String, Status<?>> status; //map de status ligados a habilidade(Stun, Slow etc...)
 	
 	public FightSkills(String name, Integer level, TypeRange<?> range,
-			Integer cooldown, Integer afterCastDelay, String description,
+			Double castTime, Double afterCastDelay, String description,
 			Map<String, Status<?>> status, Double damage, String type,
 			String element) {
-		super(name, level, range, cooldown, afterCastDelay, description);
+		super(name, level, range, castTime, afterCastDelay, description);
 		this.damage = damage;
 		this.type = type;
 		this.element = element;

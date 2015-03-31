@@ -8,33 +8,33 @@ public class Ability extends AbilityComponent{
 	private String name; //nome da habilidade
 	private Integer level_; //nível da habilidade - número de pontos ditribuídos nela
 	private TypeRange<?> range; //área de efeito da habilidade
-	private Integer cast; //tempo de execução da Habilidade
-	private Integer afterCastDelay; //tempo de espera entre Habilidades
+	private Double cast; //tempo de execução da Habilidade
+	private Double afterCastDelay; //tempo de espera entre Habilidades
 	
-	public Integer getCast() {
+	public Double getCast() {
 		return cast;
 	}
 
-	public void setCast(Integer castTime) {
+	public void setCast(Double castTime) {
 		this.cast = castTime;
 	}
 
-	public Integer getAfterCastDelay() {
+	public Double getAfterCastDelay() {
 		return afterCastDelay;
 	}
 
-	public void setAfterCastDelay(Integer afterCastDelay) {
+	public void setAfterCastDelay(Double afterCastDelay) {
 		this.afterCastDelay = afterCastDelay;
 	}
 
 	private String description; //descrição da habilidade
 	
 	
-	public Ability(String name, Integer level, TypeRange<?> range,Integer cooldown, Integer afterCastDelay, String description) {
+	public Ability(String name, Integer level, TypeRange<?> range,Double castTime, Double afterCastDelay, String description) {
 		this.name = name;
 		this.level_ = level;
 		this.range = range;
-		this.cast = cooldown;
+		this.cast = castTime;
 		this.afterCastDelay = afterCastDelay;
 		this.description = description;
 	}
