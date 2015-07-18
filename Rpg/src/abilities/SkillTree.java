@@ -6,7 +6,8 @@ import java.util.Iterator;
 import src.AbilityComponent;
 
 public class SkillTree extends AbilityComponent{
-	ArrayList<AbilityComponent> abilityComponent = new ArrayList<AbilityComponent>(); //lista de habilidades
+	//lista de habilidades
+	ArrayList<AbilityComponent> abilityComponent = new ArrayList<AbilityComponent>(); 
 	
 	private String name;
 	private String description;
