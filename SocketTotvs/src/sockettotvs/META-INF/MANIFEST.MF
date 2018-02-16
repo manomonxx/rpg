@@ -1,0 +1,4 @@
+Manifest-Version: 1.0 
+Main-Class: SocketTotvs.java 
+Class-Path: openedge.jar pool.jar progress.jar messages.jar
+

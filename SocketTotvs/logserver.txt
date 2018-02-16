@@ -1,0 +1,44 @@
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:03:47
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:04:33
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:05:16
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:06:04
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:09:47
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:10:16
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:10:54
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:11:56
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:12:26
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:14:35
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:15:06
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:16:08
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:18:10
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:19:45
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:23:13
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:24:18
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:25:14
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:26:25
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:28:00
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:29:52
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:31:46
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:32:13
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:32:38
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:33:11
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:33:30
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:33:48
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:38:14
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:42:17
+Erro: Lista de OCs vazia. Data: 11/05/2016 17:43:11
+Erro: Lista de OCs vazia. Data: 12/05/2016 08:32:33
+Erro: Lista de OCs vazia. Data: 17/05/2016 09:42:29
+Erro: Erro na obtenção do código do email do Fornecedor. Data: 17/05/2016 11:48:42
+Erro: Lista de OCs vazia. Data: 08/11/2016 18:05:18
+Erro: Lista de OCs vazia. Data: 08/11/2016 18:23:09
+Erro: Item inválido. Data: 09/11/2016 07:28:07
+Erro: Operação inválida. Data: 09/11/2016 07:36:46
+Erro: Item inválido. Data: 09/11/2016 07:36:54
+Erro: Item inválido. Data: 09/11/2016 07:40:27
+Erro: Comando inválido. Data: 09/11/2016 07:40:35
+Erro: Erro na obtenção do código do emitente. Data: 09/11/2016 07:48:27
+Erro: Erro na obtenção do código do emitente. Data: 09/11/2016 07:48:46
+Erro: Comando inválido. Data: 09/11/2016 07:52:34
+Erro: Item inválido. Data: 11/11/2016 08:50:33
+Erro: Item inválido. Data: 11/11/2016 08:52:10
